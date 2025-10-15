@@ -1,0 +1,99 @@
+faça um texto para ebook, com foco em Python, listando os principais tecnologias de API com exemplos simples de código 
+
+{REGRAS}
+> Explique de maneira simples
+> Explique o básico de como a tecnologia funciona
+> No fim fala sobre a diferença entre elas
+
+---
+
+🚗 Motor Python: Acelerando com APIs
+
+As APIs são como pontes que conectam diferentes sistemas, permitindo que eles “conversem” entre si.
+Com o Python, criar ou consumir APIs é algo simples e poderoso.
+A seguir, você vai conhecer as principais tecnologias de API com Python, como elas funcionam e exemplos básicos de uso.
+
+🧩 1. Requests – Consumindo APIs com facilidade
+
+A biblioteca Requests é usada para consumir APIs, ou seja, para enviar e receber dados de outros serviços.
+Ela é uma das mais simples e populares no Python.
+
+Como funciona:
+Você faz uma “requisição” (pedido) para um servidor e recebe uma resposta (geralmente em formato JSON).
+
+Exemplo:
+
+import requests
+
+resposta = requests.get("https://api.github.com/users/octocat")
+dados = resposta.json()
+
+print(dados["name"])
+
+
+👉 Nesse exemplo, o Python acessa a API do GitHub e mostra o nome do usuário “octocat”.
+
+⚙️ 2. Flask – Criando APIs leves e rápidas
+
+O Flask é um microframework muito popular para criar APIs simples.
+Ele é leve, fácil de aprender e ideal para projetos pequenos ou testes rápidos.
+
+Como funciona:
+Você cria rotas (URLs) que executam funções em Python e retornam dados.
+
+Exemplo:
+
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route("/api/hello")
+def hello():
+    return jsonify({"mensagem": "Olá, mundo!"})
+
+if __name__ == "__main__":
+    app.run()
+
+
+👉 Ao acessar http://localhost:5000/api/hello, a API responde com um JSON simples.
+
+🚀 3. FastAPI – APIs modernas e rápidas
+
+O FastAPI é uma das tecnologias mais recentes e poderosas para criar APIs em Python.
+Ele é rápido, suporta validação automática de dados, e gera documentação automática.
+
+Como funciona:
+Você define funções com anotações de tipo (ex: str, int), e o FastAPI usa isso para validar e documentar sua API automaticamente.
+
+Exemplo:
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/api/hello")
+def hello(nome: str = "mundo"):
+    return {"mensagem": f"Olá, {nome}!"}
+
+
+👉 Ao rodar uvicorn main:app --reload, sua API estará pronta, e você pode ver a documentação em http://localhost:8000/docs.
+
+🏗️ 4. Django REST Framework – APIs robustas e completas
+
+O Django REST Framework (DRF) é usado quando o projeto precisa de algo grande e estruturado, como um sistema com autenticação, banco de dados e controle de usuários.
+Ele é baseado no Django, um framework completo para aplicações web.
+
+Como funciona:
+Você define modelos (tabelas do banco), serializers (como os dados são convertidos) e views (as rotas da API).
+
+Exemplo:
+
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+@api_view(["GET"])
+def hello(request):
+    return Response({"mensagem": "Olá, mundo!"})
+
+
+👉 Ideal para sistemas complexos, como painéis administrativos ou APIs com autenticação.

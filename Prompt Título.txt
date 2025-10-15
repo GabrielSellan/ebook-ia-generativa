@@ -1,0 +1,15 @@
+Crie um titulo de um ebook sobre o tema APIs com Python, o ebook é do nicho de programação e o subnicho é Python, o titulo deve ser épico e curto, e tenha uma temática de carros no titulo, me liste 5 variações.
+
+---
+
+Perfeito 🚗💨 Aqui vão 5 variações de títulos épicos e curtos para seu eBook sobre APIs com Python, usando temática de carros:
+
+"Motor Python: Acelerando com APIs"
+
+"Python Turbo: Construindo APIs de Alta Performance"
+
+"Na Pista das APIs: Dominando o Python"
+
+"Garage Python: Monte Sua Máquina de APIs"
+
+"Full Throttle Python: APIs no Talento e na Velocidade"
